@@ -3,12 +3,12 @@ var gulp = require('gulp'),
 
 var paths = {
   copy: {
-    src: ['src/**/*', '!src/sass'],
+    src: ['src/**/*', '!src/sass', '!src/sass/**/*'],
     dest: 'dist'
   },
   sass: {
     src: 'src/sass/style.scss',
-    dest: 'dist/css/style.css'
+    dest: 'dist/css'
   }
 };
 
@@ -28,7 +28,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch(paths.sass.dest, ['sass']);
+  gulp.watch(paths.sass.src, ['sass']);
 });
 
 gulp.task('build', ['copy', 'sass']);
