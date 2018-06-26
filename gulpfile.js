@@ -28,7 +28,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch(paths.sass.src, ['sass']);
+  gulp.watch("src/sass/**/*", ['sass']);
 });
 
 gulp.task('build', ['copy', 'sass']);
