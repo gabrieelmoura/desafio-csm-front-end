@@ -1,0 +1,97 @@
+.csm-input-group {
+  position: relative;
+}
+
+.csm-input {
+  @include clearfix;
+  font-size: 16px;
+  border: 0;
+  border-bottom: solid 1px $secondary-color;
+  padding: 5px 0;
+  margin-bottom: 15px;
+  width: 100%;
+  color: black;
+  white-space: nowrap;
+}
+
+.csm-input-square {
+  border: solid 1px $secondary-color;
+  padding: 5px;
+}
+
+.csm-input-selectable {
+  .csm-input {
+    padding-right: 15px;
+  }
+  &::before {
+    content: ' ';
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid $secondary-color;
+    position: absolute;
+    right: 0;
+    top: 60%;
+  }
+  .pull-right {
+    margin-right: 15px;
+  }
+}
+
+.csm-input-name {
+  margin-bottom: -2px;
+  color: black;
+  white-space: nowrap;
+  &::after {
+    content: ".";
+    color: transparent;
+  }
+}
+
+.csm-box__form-help {
+  font-size: 12px;
+}
+
+.csm-button {
+  background-color: transparent;
+  border: solid 1px $secondary-color;
+  color: $secondary-color;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.csm-button-bigger {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.csm-button-full {
+  background-color: $secondary-color;
+  color: white;
+}
+
+.csm-edit-button {
+  vertical-align: sub;
+  background-image: url(../img/edit-button.png);
+  width: 20px;
+  height: 20px;
+  background-size: 100% 100%;
+  display: inline-block;
+}
+
+.csm-ok-button {
+  vertical-align: sub;
+  background-image: url(../img/icon-ok.png);
+  width: 20px;
+  height: 20px;
+  background-size: 100% 100%;
+  display: inline-block;
+}
+
+.csm-ok-button-absolute {
+  position: absolute;
+  right: 0;
+  top: 40%;
+}
